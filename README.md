@@ -1,61 +1,224 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SnapGallery (Laravel + Livewire + AlpineJS)
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://via.placeholder.com/600x300.png?text=SnapGallery+Screenshot+Placeholder" alt="SnapGallery Screenshot Placeholder" width="600">
+  <!-- TODO: Replace placeholder with an actual screenshot -->
 </p>
 
-## About Laravel
+SnapGallery is a modern, interactive photo gallery web application built with the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire). It allows users to organize photos into albums, upload new images with real-time progress feedback, view images in a fullscreen modal, reorder photos using drag-and-drop, and benefits from optimized loading thanks to image lazy-loading.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## ✨ Key Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+*   **Multi-Album Support:** Organize photos into distinct albums with names and descriptions.
+*   **Photo Uploads:**
+    *   Upload multiple photos to a specific album.
+    *   Add titles and descriptions to photos during upload.
+    *   **Real-time Upload Progress Bar:** Visual feedback on upload progress powered by Livewire and Alpine.js.
+*   **Interactive Gallery View:**
+    *   **Drag-and-Drop Sorting:** Easily reorder photos within an album using SortableJS integrated via Alpine.js. The order is persisted in the database.
+    *   **Fullscreen Image Preview:** Click on any gallery image to view it in a responsive fullscreen modal (lightbox). Close with Esc key, close button, or clicking the background.
+    *   **Image Lazy Loading:** Gallery thumbnails use native `loading="lazy"` for optimized performance, loading images only as they approach the viewport.
+*   **Album & Photo Management:** Create albums, delete albums (and their associated photos), delete individual photos.
+*   **Dynamic UI:** Leverages Livewire for seamless backend interactions without full page reloads and Alpine.js for client-side interactivity.
+*   **Responsive Design:** Styled with Tailwind CSS for usability across different screen sizes.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📸 Screenshots / GIFs
 
-## Learning Laravel
+<!--
+TODO: Add compelling screenshots or GIFs demonstrating the features!
+Examples:
+- Album list view
+- Photo gallery view within an album
+- Drag-and-drop sorting in action
+- Upload progress bar filling up
+- Fullscreen image modal
+-->
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p align="center">
+  <em>(Add your screenshots/GIFs here - You can embed images using Markdown: ![Alt text](path/to/image.png))</em>
+</p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Tech Stack
 
-## Laravel Sponsors
+*   **Backend:** Laravel (v10.x or latest)
+*   **Frontend:**
+    *   Livewire (v3.x)
+    *   Alpine.js (v3.x)
+    *   Tailwind CSS (v3.x)
+    *   SortableJS (for drag-and-drop)
+*   **Database:** MySQL / PostgreSQL / SQLite (Configurable via Laravel's `.env`)
+*   **Build Tools:** Vite (configured with Laravel) / Node.js & NPM/Yarn
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+  ## 📁 Project Structure
+  ```
+  ├── app/
+│ ├── Http/
+│ │ └── Controllers/
+│ │ └── Controller.php
+│ ├── Livewire/
+│ │ ├── AlbumList.php
+│ │ ├── CreateAlbumForm.php
+│ │ └── PhotoGallery.php
+│ ├── Models/
+│ │ ├── Album.php
+│ │ ├── Photo.php
+│ │ └── User.php
+│ └── Providers/
+│ └── AppServiceProvider.php
+├── bootstrap/
+│ ├── cache/
+│ ├── app.php
+│ └── providers.php
+├── config/
+│ ├── app.php
+│ ├── auth.php
+│ ├── cache.php
+│ ├── database.php
+│ ├── filesystems.php
+│ ├── logging.php
+│ ├── livewire.php
+│ ├── mail.php
+│ ├── queue.php
+│ ├── services.php
+│ └── session.php
+├── database/
+│ ├── factories/
+│ └── migrations/
+│ ├── 0001_01_01_000000_create_users_table.php
+│ ├── 0001_01_01_000001_create_cache_table.php
+│ ├── 0001_01_01_000002_create_jobs_table.php
+│ ├── 2025_04_28_040811_create_photos_table.php
+│ ├── 2025_04_28_064211_add_order_column_to_photos_table.php
+│ ├── 2025_04_28_093733_create_albums_table.php
+│ └── 2025_04_28_093809_add_album_id_to_photos_table.php
+├── public/
+│ └── (Build assets like index.php, assets folder via Vite, etc.)
+├── resources/
+│ ├── css/
+│ │ └── app.css
+│ ├── js/
+│ │ ├── app.js
+│ │ └── bootstrap.js
+│ └── views/
+│ ├── components/
+│ │ └── layouts/
+│ │ └── app.blade.php
+│ ├── livewire/
+│ │ ├── album-list.blade.php
+│ │ ├── create-album-form.blade.php
+│ │ └── photo-gallery.blade.php
+│ └── welcome.blade.php
+├── routes/
+│ ├── console.php
+│ └── web.php
+├── storage/
+│ ├── app/
+│ ├── framework/
+│ └── logs/
+│ ├── .gitignore
+│ └── laravel.log
+├── tests/
+├── vendor/
+├── .editorconfig
+├── .env
+├── .env.example
+├── .gitattributes
+├── .gitignore
+├── README.md
+├── artisan
+├── composer.json
+├── composer.lock
+├── package.json
+├── phpunit.xml
+└── vite.config.js
+```
 
-### Premium Partners
+## 🔧 Installation & Setup
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/[YOUR_GITHUB_USERNAME]/SnapGallery.git
+    cd SnapGallery
+    ```
+    *(Replace `[YOUR_GITHUB_USERNAME]` with your actual GitHub username)*
 
-## Contributing
+2.  **Install PHP Dependencies:**
+    ```bash
+    composer install
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3.  **Install Node.js Dependencies:**
+    ```bash
+    npm install
+    # or if you use yarn:
+    # yarn install
+    ```
 
-## Code of Conduct
+4.  **Build Frontend Assets:**
+    ```bash
+    npm run dev
+    # Or for production: npm run build
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5.  **Environment Setup:**
+    *   Copy the example environment file:
+        ```bash
+        cp .env.example .env
+        ```
+    *   Generate the application key:
+        ```bash
+        php artisan key:generate
+        ```
 
-## Security Vulnerabilities
+6.  **Configure Database:**
+    *   Open the `.env` file in your text editor.
+    *   Update the `DB_*` variables (e.g., `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`) to match your local database setup. Make sure the database exists.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7.  **Run Database Migrations:**
+    *   This will create the `albums` and `photos` tables with the necessary columns (including `album_id` and `order`).
+    ```bash
+    php artisan migrate
+    ```
 
-## License
+8.  **Create Storage Link:**
+    *   This is crucial for making uploaded images publicly accessible.
+    ```bash
+    php artisan storage:link
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+9.  **Serve the Application:**
+    ```bash
+    php artisan serve
+    ```
+
+10. **Access the Application:**
+    *   Open your web browser and navigate to `http://127.0.0.1:8000` (or the address provided by `php artisan serve`). You should be redirected to the `/albums` page.
+
+## ⚙️ Usage
+
+*   Navigate to the application URL (usually `http://127.0.0.1:8000/albums`).
+*   Create a new album using the "Create New Album" button.
+*   Click on an album to view its gallery.
+*   Inside an album:
+    *   Upload photos using the form at the top. Observe the progress bar.
+    *   Click and drag photos (using the drag handle that appears on hover) to reorder them.
+    *   Click on a photo thumbnail to view it in fullscreen.
+    *   Delete individual photos using the 'X' button.
+*   On the album list page, you can delete entire albums (this will also delete all photos within that album due to database constraints).
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find a bug or have a feature request, please open an issue on GitHub. If you'd like to contribute code:
+
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/your-feature-name`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some feature'`).
+5.  Push to the branch (`git push origin feature/your-feature-name`).
+6.  Open a Pull Request.
+
+## 📄 License
+
+This project is open-source software licensed under the [MIT license](LICENSE).
+*(Consider adding a `LICENSE` file with the MIT license text if you haven't already).*
