@@ -31,10 +31,10 @@ SnapGallery is a modern, interactive photo gallery web application built with th
 ### 📌 upload photos to album
 ![upload photos Screenshot](public/images/upload.png)
 
-### 📌 Drag and Drop Functionality
+### 📌 Drag-and-Drop Sorting
 ![upload photos Screenshot](public/images/drag_drop_1.png)
 
-### 📌 Drag and Drop Functionality
+### 📌 Drag-and-Drop Sorting
 ![upload photos Screenshot](public/images/drag_drop_2.png)
 
 ### 📌 Gallery
