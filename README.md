@@ -17,12 +17,7 @@ SnapGallery is a modern, interactive photo gallery web application built with th
 *   **Dynamic UI:** Leverages Livewire for seamless backend interactions without full page reloads and Alpine.js for client-side interactivity.
 *   **Responsive Design:** Styled with Tailwind CSS for usability across different screen sizes.
 
-## 📸 Screenshots / GIFs
-
-<p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=SnapGallery+Screenshot+Placeholder" alt="SnapGallery Screenshot Placeholder" width="600">
-  <!-- TODO: Replace placeholder with an actual screenshot -->
-</p>
+## 📸 Screenshots 
 
 ### 📌 Mutiple Albums
 ![albums Screenshot](public/images/albums.png)
@@ -36,16 +31,16 @@ SnapGallery is a modern, interactive photo gallery web application built with th
 ### 📌 upload photos to album
 ![upload photos Screenshot](public/images/upload.png)
 
-### 📌 upload photos to album
+### 📌 Drag and Drop Functionality
 ![upload photos Screenshot](public/images/drag_drop_1.png)
 
-### 📌 upload photos to album
+### 📌 Drag and Drop Functionality
 ![upload photos Screenshot](public/images/drag_drop_2.png)
 
-### 📌 upload photos to album
+### 📌 Gallery
 ![upload photos Screenshot](public/images/gallery.png)
 
-### 📌 upload photos to album
+### 📌 full screen view
 ![upload photos Screenshot](public/images/preview.png)
 
 ## 🚀 Tech Stack
