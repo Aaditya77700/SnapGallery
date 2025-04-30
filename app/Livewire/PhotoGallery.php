@@ -40,7 +40,7 @@ class PhotoGallery extends Component
     public function save()
     {
         $this->validate([
-            'photos.*' => 'image|max:2048', // Max 2MB per image
+            'photos.*' => 'image|max:10048', 
             'titles.*' => 'nullable|string|max:255',
             'descriptions.*' => 'nullable|string',
         ]);
@@ -103,4 +103,4 @@ class PhotoGallery extends Component
         return view('livewire.photo-gallery')
                 ->with('layout', 'layouts.app'); // Pass layout data to the view
     }
-}
+}      
