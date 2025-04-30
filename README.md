@@ -36,9 +36,17 @@ SnapGallery is a modern, interactive photo gallery web application built with th
 ### 📌 upload photos to album
 ![upload photos Screenshot](public/images/upload.png)
 
+### 📌 upload photos to album
+![upload photos Screenshot](public/images/drag_drop_1.png)
 
+### 📌 upload photos to album
+![upload photos Screenshot](public/images/drag_drop_2.png)
 
+### 📌 upload photos to album
+![upload photos Screenshot](public/images/gallery.png)
 
+### 📌 upload photos to album
+![upload photos Screenshot](public/images/preview.png)
 
 ## 🚀 Tech Stack
 
