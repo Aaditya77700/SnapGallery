@@ -1,10 +1,5 @@
 # SnapGallery (Laravel + Livewire + AlpineJS)
 
-<p align="center">
-  <img src="https://via.placeholder.com/600x300.png?text=SnapGallery+Screenshot+Placeholder" alt="SnapGallery Screenshot Placeholder" width="600">
-  <!-- TODO: Replace placeholder with an actual screenshot -->
-</p>
-
 SnapGallery is a modern, interactive photo gallery web application built with the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire). It allows users to organize photos into albums, upload new images with real-time progress feedback, view images in a fullscreen modal, reorder photos using drag-and-drop, and benefits from optimized loading thanks to image lazy-loading.
 
 ## ✨ Key Features
@@ -24,19 +19,25 @@ SnapGallery is a modern, interactive photo gallery web application built with th
 
 ## 📸 Screenshots / GIFs
 
-<!--
-TODO: Add compelling screenshots or GIFs demonstrating the features!
-Examples:
-- Album list view
-- Photo gallery view within an album
-- Drag-and-drop sorting in action
-- Upload progress bar filling up
-- Fullscreen image modal
--->
-
 <p align="center">
-  <em>(Add your screenshots/GIFs here - You can embed images using Markdown: ![Alt text](path/to/image.png))</em>
+  <img src="https://via.placeholder.com/600x300.png?text=SnapGallery+Screenshot+Placeholder" alt="SnapGallery Screenshot Placeholder" width="600">
+  <!-- TODO: Replace placeholder with an actual screenshot -->
 </p>
+
+### 📌 Mutiple Albums
+![albums Screenshot](public/images/albums.png)
+
+### 📌 Real time progress bar
+![progress bar Screenshot](public/images/progress_bar.png)
+
+### 📌 Create Albums
+![Create albums Screenshot](public/images/create_albums.png)
+
+### 📌 upload photos to album
+![upload photos Screenshot](public/images/upload.png)
+
+
+
 
 
 ## 🚀 Tech Stack
