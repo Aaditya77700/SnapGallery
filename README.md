@@ -222,7 +222,24 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 5.  Push to the branch (`git push origin feature/your-feature-name`).
 6.  Open a Pull Request.
 
-## 📄 License
+## 📜 **License**
 
-This project is open-source software licensed under the [MIT license](LICENSE).
-*(Consider adding a `LICENSE` file with the MIT license text if you haven't already).*
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 👨‍💻 **Author**
+
+**Kombee Technologies**
+
+- 🌐 [Portfolio](https://github.com/kombee-technologies)
+- 💼 [LinkedIn](https://in.linkedin.com/company/kombee-global)
+- 🌍 [Website](https://www.kombee.com/)
+
+---
+
+<p align="center">
+  Built with ❤️ using Laravel
+</p>
+
+---
